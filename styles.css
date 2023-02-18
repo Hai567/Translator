@@ -1,0 +1,102 @@
+/* Variables */
+:root{
+    --textarea-outline-color : #F0A04B;
+    --body-background-color: #BFDCE5
+}
+/* General CSSs */
+textarea{
+    resize: none;
+    outline: none;
+}
+body{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    background-color: var(--body-background-color);
+}
+.none-display{
+    display: none;
+}
+/* Normal */
+.main{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.translate-box{
+    justify-self: center;
+    width: 75%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+}
+.translate-from{
+    /* border: 1px solid black; */
+}
+.fromLang, .toLang{
+    width: 100%;
+    height: 2em;
+    display: block;
+    text-align: center;
+}
+.input-text{
+    height: 10em;
+    width: 100%;
+}
+.translate-to{
+    position: relative;
+}
+.output{
+    background-color: white;
+    width: 100%;
+    height: 10em;
+}
+button.submit{
+    border: none;
+    background-color: var(--textarea-outline-color);
+    width: 75%;
+    border-radius: 5px;
+    height: 2.5em;
+}
+button.submit:hover{
+    box-shadow: inset -39px 39px 78px #e69a48,
+            inset 39px -39px 78px #faa64e;
+}
+
+/* Animation */
+.loading-animation{
+    top: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+  }
+  
+  .loading-bar {
+    height: 18px;
+    width: 4px;
+    margin: 0 2px;
+    background-color: #333;
+    animation: loading 1s ease-in-out infinite;
+  }
+  
+  @keyframes loading {
+    0% {
+      transform: scale(1);
+    }
+    20% {
+      transform: scale(1, 2.5);
+    }
+    40% {
+      transform: scale(1);
+    }
+  }
+  
